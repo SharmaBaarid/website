@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+.cursor{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: orange;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+.nav .part-1{
+    height: 104px;
+    overflow: hidden;
+}
+.nav .part-1 svg{
+    display: block;
+}
+.nav{
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part-1{
+    padding: 22px;
+}
+.part-2{
+    display: flex;
+    position: absolute;
+    top: 1.5vw;
+    right: 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.part-2 .links {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    margin-right: 5vw;
+}
+.links a{
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.part-2 .icons {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    padding: 0.6vw 1vw;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+/* page-1 */
+
+.page-1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 2vw;
+    padding-top: 28vh;
+}
+.page-1 h1{
+    font-size: 15.6vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 14vw;
+    letter-spacing: -8px;
+}
+#h1{
+    display: inline-block;
+    margin-right: 2.6vw;
+}
+.video-container{
+   margin-top: 1vw;
+   height: 100vh;
+   width: 100%;
+   position: relative;
+}
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.video-container .play{
+    padding: 3vw 1.8vw;
+    background-color: black;
+    color: #fff;
+    font-family: futura;
+    font-size: 2.3vw;
+    position: absolute;
+    text-transform: uppercase;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+/* page-2 */
+
+.page-2{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 2vw ;
+}
+.page-2 .elem{
+    height: 100%;
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+
+}
+.page-2 .elem .dets{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 80%;
+    background-color: rgb(229, 240, 214);
+    position: absolute;
+    border-radius: 50px;
+}
+ .elem .dets img{
+    height: 60px;
+    
+}
+.dets p:nth-child(4){
+    margin-right: 2vw;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.dets p:nth-child(1){
+    margin-left: 2vw;
+}
+.dets p:nth-child(3){
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* page-3 */
+
+.page-3{
+    min-height: 120vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 48vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 12vh;
+}
+.page-3 .child img{
+    height: 100%;
+    object-fit: cover;
+}
+
+/* responsive */
+
+@media (max-width:600px) {
+    .page-1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+        margin-bottom: 4vh;
+    }
+    .page-1 h1{
+        font-size: 15.6vw;
+        letter-spacing: -3px;
+    }
+    .video-container{
+        margin-top: 3vw;
+        height: 40vh;
+     }
+     .video-container .play{
+        padding: 7vw 5vw;
+        font-size: 4vw;
+        position: absolute;
+        text-transform: uppercase;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    .page-2{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw 3vw ;
+    }
+    .page-2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 4vh;
+    }
+    .page-2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.2;
+    }  
+    .part-2{
+        top: 6vw;
+    } 
+    .child{
+        height: 45vh;
+        width: 80%;
+    }
+    .cursor{
+        height: 140px;
+        width: 140px;
+    }
+    .page-3{
+        min-height: 120vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-wrap: wrap;
+    }
+}
